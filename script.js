@@ -1,7 +1,7 @@
 const btn = document.getElementById('button');
 
 function h() {
-   btn.value = 'Sending...';
+   btn.innerHTML = 'sending...';
 
    const serviceID = 'default_service';
    const templateID = 'template_upqlxrh';

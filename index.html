@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 <form id="form">
 <div class="field"></div>
   <button type="submit" id="button" onclick="h()" >send email</button>
@@ -10,4 +9,24 @@
 
 <script type="text/javascript">
   emailjs.init('Tf4fy-SNBD8mJLmrM')
+</script>
+
+<script>
+  const btn = document.getElementById('button');
+
+function h() {
+   btn.innerHTML = 'sending...';
+
+   const serviceID = 'service_tsqomch';
+   const templateID = 'template_upqlxrh';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.innerHTML = 'send email';
+      alert('sent!');
+    }, (err) => {
+      btn.innerHTML = 'send email';
+      alert(JSON.stringify(err));
+    });
+}
 </script>
