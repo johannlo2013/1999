@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/styles2.css">
-        <link rel="stylesheet" href="css/newheader.css">
-        <link rel="stylesheet" href="css/contact.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
         <script type="text/javascript">
           (function(){
-            emailjs.init("Tf4fy-SNBD8mJLmrM"); // i have the user id in the code I just didn't want to post it online
+            emailjs.init("Tf4fy-SNBD8mJLmrM");
           })();
         </script>
         <script type="text/javascript">
@@ -17,19 +14,15 @@
                 event.preventDefault();
                 // generate the contact number value
                 this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('service_tsqomch', 'template_upqlxrh', this);
+                emailjs.send('service_tsqomch', 'template_upqlxrh');
             });
         }
     </script>
     </head>
 
   <body>
-     <header>
-     {{>header_2}}
-     </header>
-
       <form id="contact-form">
         <input type="submit" value="send">
-    </form>
+      </form>
     </body>
 </html>
