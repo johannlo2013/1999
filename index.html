@@ -20,7 +20,7 @@ function h() {
    const serviceID = 'service_tsqomch';
    const templateID = 'template_upqlxrh';
 
-   emailjs.sendForm(serviceID, templateID, this)
+   emailjs.sendForm(serviceID, templateID)
     .then(() => {
       btn.innerHTML = 'send email';
       alert('sent!');
